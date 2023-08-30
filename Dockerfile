@@ -8,7 +8,7 @@ COPY requirements.txt /deployment
  
 RUN pip3 install -r requirements.txt
 
-ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0:8080 --workers=2"
+ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0:8080 --workers=2 --log-level=debug "
  
 EXPOSE 8080
  
