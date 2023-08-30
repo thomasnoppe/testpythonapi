@@ -1,9 +1,4 @@
-from setuptools import setup, find_packages
+from app import app  # Assuming your Flask app instance is named "app"
 
-setup (
-    name             = "testapp",
-    version          = "0.1",
-    description      = "Example application to be deployed.",
-    packages         = find_packages(),
-    install_requires = ["gunicorn"],
-)
+if __name__ == "__main__":
+    app.run()
